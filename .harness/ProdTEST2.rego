@@ -1,6 +1,6 @@
 package pipeline
 
-# Deny pipelines that do not use allowed environments
+# Deny pipelines that do not use allowed environments --Test Prior to github change
 # NOTE: Try removing "nonprod" from the 'allowed_environments' list to see the policy fail
 deny[msg] {
 	# Find all deployment stages
