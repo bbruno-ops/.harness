@@ -6,7 +6,7 @@ deny[msg] {
 	# Find all stages that are Deployments ...
 	input.pipeline.stages[i].stage.type == "Deployment"
 
-	# ... that are not in the set of stages with HarnessApproval steps
+	# ... that are not in the set of stages with HarnessApproval steps --Comment
 	not stages_with_approval[i]
 
 	# Show a human-friendly error message
