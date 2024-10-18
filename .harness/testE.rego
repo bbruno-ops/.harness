@@ -1,6 +1,6 @@
 package pipeline
 
-# Deny pipelines that don't have an approval step
+# Deny pipelines that don't have an approval step -- test no policy set needed
 # NOTE: Try removing the HarnessApproval step from your input to see the policy fail
 deny[msg] {
 	# Find all stages that are Deployments ...
