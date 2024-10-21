@@ -1,6 +1,6 @@
 package pipeline_approval
 
-# Deny pipelines that don't have an approval step --TestComment
+# Deny pipelines that don't have an approval step 
 deny[sprintf("deployment stage '%s' does not have a HarnessApproval step", [input.pipeline.stages[i].stage.name])] {
     input.pipeline.stages[i].stage.type == "Deployment"  # Find all stages that are Deployments ...
     not stages_with_approval[i]                          # ... that are not in the set of stages with HarnessApproval steps
