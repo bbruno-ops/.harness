@@ -1,0 +1,26 @@
+template:
+  name: PipelineTest1
+  identifier: PipelineTest1
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: DoNotDelete_Brooke2
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s1
+          identifier: s1
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - stepGroup:
+                    name: stepGroupRemoteTemp
+                    identifier: stepGroupRemoteTemp
+                    template:
+                      templateRef: remoteStepGroup
+                      versionLabel: v1
+                      gitBranch: nonDefaultBranch
+          tags: {}
